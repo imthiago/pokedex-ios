@@ -9,7 +9,6 @@ import UIKit
 import Lottie
 
 class LaunchScreenViewController: UIViewController {
-
     private let imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 478, height: 976))
         imageView.image = UIImage(named: "splash")
@@ -45,16 +44,16 @@ class LaunchScreenViewController: UIViewController {
     }
 
     private func animate() {
-        UIView.animate(withDuration: 2, delay: 1.5, animations: {
+        UIView.animate(withDuration: 1.5, delay: 1.5, animations: {
             self.imageView.alpha = 0
             self.animationView?.alpha = 0
         }, completion: { done in
             if done {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    let homeViewController = HomeViewController()
-                    homeViewController.modalTransitionStyle = .crossDissolve
-                    homeViewController.modalPresentationStyle = .fullScreen
-                    self.present(homeViewController, animated: true)
+                DispatchQueue.main.async {
+                    let navigationController = UINavigationController(rootViewController: HomeViewController())
+                    navigationController.modalTransitionStyle = .crossDissolve
+                    navigationController.modalPresentationStyle = .fullScreen
+                    self.present(navigationController, animated: true)
                 }
             }
         })

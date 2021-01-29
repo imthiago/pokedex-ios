@@ -14,3 +14,17 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .white
     }
 }
+
+extension HomeViewController: ViewCodeConfiguration {
+    func buildHierarchy() {
+
+    }
+
+    func setupConstraints() {
+
+    }
+
+    func configureViews() {
+
+    }
+}
