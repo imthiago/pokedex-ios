@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let homeViewController = HomeViewController()
+        let homeViewController = LaunchScreenViewController()
 
         window?.rootViewController = homeViewController
         window?.makeKeyAndVisible()
