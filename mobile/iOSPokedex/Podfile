@@ -7,5 +7,6 @@ target 'iOSPokedex' do
 
   # Pods for iOSPokedex
   pod 'SwiftLint'
+  pod 'lottie-ios'
 
 end
