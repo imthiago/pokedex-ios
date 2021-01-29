@@ -12,7 +12,7 @@
 		AF3BB99325C382C6002207D9 /* ViewCodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3BB99225C382C6002207D9 /* ViewCodeConfiguration.swift */; };
 		AF3BB99825C38333002207D9 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3BB99725C38333002207D9 /* UIViewController+.swift */; };
 		AF942E1A25912C0A00CE7010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF942E1925912C0A00CE7010 /* AppDelegate.swift */; };
-		AF942E1E25912C0A00CE7010 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF942E1D25912C0A00CE7010 /* ViewController.swift */; };
+		AF942E1E25912C0A00CE7010 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF942E1D25912C0A00CE7010 /* HomeViewController.swift */; };
 		AF942E2325912C0B00CE7010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF942E2225912C0B00CE7010 /* Assets.xcassets */; };
 		AF942E2625912C0B00CE7010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF942E2425912C0B00CE7010 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -25,7 +25,7 @@
 		AF3BB99725C38333002207D9 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		AF942E1625912C0A00CE7010 /* iOSPokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF942E1925912C0A00CE7010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF942E1D25912C0A00CE7010 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF942E1D25912C0A00CE7010 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AF942E2225912C0B00CE7010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF942E2525912C0B00CE7010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF942E2725912C0B00CE7010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 				AF942E2225912C0B00CE7010 /* Assets.xcassets */,
 				AF942E2425912C0B00CE7010 /* LaunchScreen.storyboard */,
 				AF942E2725912C0B00CE7010 /* Info.plist */,
-				AF942E1D25912C0A00CE7010 /* ViewController.swift */,
+				AF942E1D25912C0A00CE7010 /* HomeViewController.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3BB99325C382C6002207D9 /* ViewCodeConfiguration.swift in Sources */,
-				AF942E1E25912C0A00CE7010 /* ViewController.swift in Sources */,
+				AF942E1E25912C0A00CE7010 /* HomeViewController.swift in Sources */,
 				AF3BB99825C38333002207D9 /* UIViewController+.swift in Sources */,
 				AF942E1A25912C0A00CE7010 /* AppDelegate.swift in Sources */,
 				AF3BB98C25C38169002207D9 /* Coordinator.swift in Sources */,
@@ -409,7 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imthiago.iOSPokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -429,7 +429,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imthiago.iOSPokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
