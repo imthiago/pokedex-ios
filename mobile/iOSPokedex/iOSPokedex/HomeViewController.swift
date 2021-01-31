@@ -18,13 +18,12 @@ class HomeViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(PokemonCell.self, forCellWithReuseIdentifier: "cell")
         return collectionView
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -42,6 +41,8 @@ extension HomeViewController: ViewCodeConfiguration {
     }
 
     func setupConstraints() {
+        view.backgroundColor = .white
+
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15).isActive = true
@@ -52,7 +53,7 @@ extension HomeViewController: ViewCodeConfiguration {
             .constraint(equalTo: titleLabel.bottomAnchor, constant: 20)
             .isActive = true
         collectionView.leadingAnchor
-            .constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 20)
+            .constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20)
             .isActive = true
         collectionView.trailingAnchor
             .constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
@@ -86,9 +87,12 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .red
-        cell.layer.cornerRadius = 10
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PokemonCell {
+            cell.backgroundColor = .red
+            cell.layer.cornerRadius = 10
+            return cell
+        }
+
+        return UICollectionViewCell()
     }
 }
