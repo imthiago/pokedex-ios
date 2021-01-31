@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(PokemonCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(PokemonCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         return collectionView
     }()
 
@@ -66,6 +66,7 @@ extension HomeViewController: ViewCodeConfiguration {
         titleLabel.font = UIFont(name: "Avenir Heavy", size: 32)
 
         collectionView.backgroundColor = .white
+        collectionView.showsVerticalScrollIndicator = false
     }
 }
 
@@ -87,9 +88,9 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PokemonCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PokemonCollectionViewCell {
             cell.backgroundColor = .red
-            cell.layer.cornerRadius = 10
+            cell.layer.cornerRadius = 12
             return cell
         }
 
