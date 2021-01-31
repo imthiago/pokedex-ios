@@ -17,6 +17,7 @@
 		AF3BB9BD25C3B3A3002207D9 /* PokedexDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3BB9BC25C3B3A3002207D9 /* PokedexDomainTests.swift */; };
 		AF3BB9CF25C3B406002207D9 /* iOSPokedexDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3BB9AF25C3B3A3002207D9 /* iOSPokedexDomain.framework */; };
 		AF3BB9D025C3B406002207D9 /* iOSPokedexDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF3BB9AF25C3B3A3002207D9 /* iOSPokedexDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF4481A625C6300500997544 /* Teste.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4481A525C6300500997544 /* Teste.xib */; };
 		AF942E1A25912C0A00CE7010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF942E1925912C0A00CE7010 /* AppDelegate.swift */; };
 		AF942E1E25912C0A00CE7010 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF942E1D25912C0A00CE7010 /* LaunchScreenViewController.swift */; };
 		AF942E2325912C0B00CE7010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF942E2225912C0B00CE7010 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		AF3BB9B725C3B3A3002207D9 /* iOSPokedexDomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSPokedexDomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3BB9BC25C3B3A3002207D9 /* PokedexDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexDomainTests.swift; sourceTree = "<group>"; };
 		AF3BB9BE25C3B3A3002207D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF4481A525C6300500997544 /* Teste.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Teste.xib; sourceTree = "<group>"; };
 		AF942E1625912C0A00CE7010 /* iOSPokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF942E1925912C0A00CE7010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF942E1D25912C0A00CE7010 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -127,9 +129,9 @@
 				AF942E1925912C0A00CE7010 /* AppDelegate.swift */,
 				AF942E2225912C0B00CE7010 /* Assets.xcassets */,
 				AF942E2425912C0B00CE7010 /* LaunchScreen.storyboard */,
-				AF942E2725912C0B00CE7010 /* Info.plist */,
 				AF942E1D25912C0A00CE7010 /* LaunchScreenViewController.swift */,
 				AF3BB9A725C3A74E002207D9 /* 22892-pikachu.json */,
+				AF942E2725912C0B00CE7010 /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -154,6 +156,7 @@
 			children = (
 				AF3BB99E25C3A075002207D9 /* HomeView */,
 				AF3BB99225C382C6002207D9 /* ViewCodeConfiguration.swift */,
+				AF4481A525C6300500997544 /* Teste.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				AF942E2625912C0B00CE7010 /* LaunchScreen.storyboard in Resources */,
 				AF3BB9A825C3A74E002207D9 /* 22892-pikachu.json in Resources */,
 				AF942E2325912C0B00CE7010 /* Assets.xcassets in Resources */,
+				AF4481A625C6300500997544 /* Teste.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

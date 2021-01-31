@@ -51,9 +51,10 @@ class LaunchScreenViewController: UIViewController {
             if done {
                 DispatchQueue.main.async {
                     let navigationController = UINavigationController(rootViewController: HomeViewController())
+                    navigationController.setNavigationBarHidden(true, animated: true)
                     navigationController.modalTransitionStyle = .crossDissolve
                     navigationController.modalPresentationStyle = .fullScreen
-                    self.present(navigationController, animated: true)
+                    self.present(navigationController, animated: false)
                 }
             }
         })
