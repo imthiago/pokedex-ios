@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         return collectionView
@@ -56,9 +57,7 @@ extension HomeViewController: ViewCodeConfiguration {
         collectionView.trailingAnchor
             .constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
             .isActive = true
-        collectionView.bottomAnchor
-            .constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
-            .isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
     func configureViews() {
@@ -74,14 +73,14 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        return CGSize(width: collectionView.frame.width / 2.5, height: collectionView.frame.width / 2)
+        return CGSize(width: collectionView.frame.width / 2.1, height: collectionView.frame.width / 3)
     }
 }
 
 // MARK: - UICollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 30
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -89,6 +88,7 @@ extension HomeViewController: UICollectionViewDataSource {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         cell.backgroundColor = .red
+        cell.layer.cornerRadius = 10
         return cell
     }
 }
