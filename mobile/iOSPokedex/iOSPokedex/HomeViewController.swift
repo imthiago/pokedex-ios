@@ -50,7 +50,7 @@ extension HomeViewController: ViewCodeConfiguration {
 
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.topAnchor
-            .constraint(equalTo: titleLabel.bottomAnchor, constant: 20)
+            .constraint(equalTo: titleLabel.bottomAnchor, constant: 15)
             .isActive = true
         collectionView.leadingAnchor
             .constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20)
@@ -88,7 +88,8 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PokemonCollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+            as? PokemonCollectionViewCell {
             cell.backgroundColor = .red
             cell.layer.cornerRadius = 12
             return cell
