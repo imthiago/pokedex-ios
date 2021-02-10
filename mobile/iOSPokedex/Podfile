@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '14.3'
+# platform :ios, '9.0'
 
 target 'iOSPokedex' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -11,5 +11,53 @@ target 'iOSPokedex' do
   pod 'Alamofire', '~> 5.2'
   pod 'SDWebImage', '~> 5.0'
   pod "PromiseKit", "~> 6.8"
+
+end
+
+target 'iOSPokedexApplication' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOSPokedexApplication
+
+  target 'iOSPokedexApplicationTests' do
+    # Pods for testing
+  end
+
+end
+
+target 'iOSPokedexDomain' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOSPokedexDomain
+
+  target 'iOSPokedexDomainTests' do
+    # Pods for testing
+  end
+
+end
+
+target 'iOSPokedexInfrastructure' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOSPokedexInfrastructure
+
+  target 'iOSPokedexInfrastructureTests' do
+    # Pods for testing
+  end
+
+end
+
+target 'iOSPokedexPresentation' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOSPokedexPresentation
+
+  target 'iOSPokedexPresentationTests' do
+    # Pods for testing
+  end
 
 end
